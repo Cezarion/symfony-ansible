@@ -16,19 +16,32 @@ I have made a basic Ansible provisioning that will be sufficient to run symfony 
 If so you should have a look at the list of [our best roles](https://github.com/theodo/list-ansible-roles/blob/master/README.md).
 
 ### Step 1) Install the Ansible's roles ###
-<pre>ansible-galaxy install -r requirements.txt --force</pre>
-<p>You can choose where you want your vendors to be stored in th ansible.cfg file</p>
+```
+#!shell
+ansible-galaxy install -r requirements.txt --force
+```
+
+You can choose where you want your vendors to be stored in th ansible.cfg file   
 
 ### Step 2) Configure your basic Vagrant's informations ###
-<p>Change your project's name in the Vagrant file and choose the directory you want to sync (where your symfony project is) at the line:</p>
-<pre>config.vm.synced_folder "./", "/var/www/" + projectname + "/current", type: "nfs"</pre>
 
-<p>You may want to change the ip of the vm at the line</p>
-<pre>config.vm.network :private_network, ip: "10.0.0.7"</pre>
+Change your project's name in the Vagrant file and choose the directory you want to sync (where your symfony project is) at the line:   
+```
+#!shell
+config.vm.synced_folder "./", "/var/www/" + projectname + "/current", type: "nfs"
+```
+
+
+You may want to change the ip of the vm at the line   
+```
+#!shell
+config.vm.network :private_network, ip: "10.0.0.7"
+```
 
 Have a look at the [vagrant's documentation](https://docs.vagrantup.com/v2/provisioning/ansible.html) for more information.
 ### Step 3)Customize your provisioning ###
-<p>Configure your vm in the provisioning/vars/main.yml. Mainly it will be usefull for changing the database information</p> 
+
+Configure your vm in the provisioning/vars/main.yml. Mainly it will be usefull for changing the database information    
 
 ### Step 4) ###
 ```
