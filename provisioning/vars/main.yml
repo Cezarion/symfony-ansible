@@ -39,7 +39,7 @@ automysqlbackup_cron:
 automysqlbackup_latest: "yes"
 
 apache_site_enable:
-      - "{{ projectname }}.vb"
+      - "{{ projectname }}.conf"
 
 apache_vhosts:
   - server_name: "{{ projectname }}.vb"

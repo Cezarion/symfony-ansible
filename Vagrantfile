@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 # TODO: Change the name
-projectname = 'beehive'
+projectname = 'symfnony-bootstrap'
 
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/jessie64"
