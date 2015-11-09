@@ -23,9 +23,9 @@ Vagrant.configure("2") do |config|
     }
 
     config.cache.enable :generic, {
-      "cache"  => { cache_dir: "/var/www/" + projectname + "/current/htdocs/app/cache" },
-      "logs"   => { cache_dir: "/var/www/" + projectname + "/current/htdocs/app/logs" },
-      "vendor" => { cache_dir: "/var/www/" + projectname + "/current/htdocs/vendor" },
+      "cache"  => { cache_dir: "/var/www/" + projectname + "/current/app/cache" },
+      "logs"   => { cache_dir: "/var/www/" + projectname + "/current/app/logs" },
+      "vendor" => { cache_dir: "/var/www/" + projectname + "/current/vendor" },
     }
   end
 
@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
     ansible.extra_vars = {
       # general
       projectname: projectname,
-      document_root: "/var/www/" + projectname + "/current/htdocs"
+      document_root: "/var/www/current/htdocs"
     }
     ansible.limit = 'vagrant'
     ansible.inventory_path = "provisioning/hosts/vagrant"

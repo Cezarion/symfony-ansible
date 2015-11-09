@@ -7,3 +7,4 @@
 - include: users.yml
 - include: sudo.yml
 - include: npm_packages.yml
+- include: symfony_installer.yml
