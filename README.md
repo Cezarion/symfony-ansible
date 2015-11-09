@@ -11,15 +11,15 @@ https://github.com/MaximeThoonsen/symfony-ansible
 
 ** Requirements : **
 
-[VirtualBox](https://www.virtualbox.org/)
-[Vagrant](https://www.vagrantup.com/)
+[VirtualBox](https://www.virtualbox.org/)   
+[Vagrant](https://www.vagrantup.com/)   
 
 Vagrant plugin :
-[Vagrant host updater](https://github.com/cogitatio/vagrant-hostsupdater)
-[Vagrant cachier](https://github.com/fgrehm/vagrant-cachier)
+[Vagrant host updater](https://github.com/cogitatio/vagrant-hostsupdater)    
+[Vagrant cachier](https://github.com/fgrehm/vagrant-cachier)   
 
 ** Vagrant file : **
-Linux : debian/jessie64 instead of ubuntu/trusty64
+Linux : debian/jessie64 instead of ubuntu/trusty64     
 Variables : add *ansible.extra_vars* to set *document root* and share *project name*
 
 ** Playbooks : **
