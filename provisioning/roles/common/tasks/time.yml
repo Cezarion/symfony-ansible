@@ -11,3 +11,8 @@
 - name: Set default system language pack
   shell: locale-gen {{locale}}
   sudo: yes
+
+- name: set local to {{ locale }}
+  template: src=etc/environment dest=/etc/environment
+  notify: update-tzdata
+  sudo: yes

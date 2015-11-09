@@ -53,6 +53,8 @@ Vagrant.configure("2") do |config|
       ansible.playbook = "provisioning/playbook.yml"
       ansible.extra_vars = {
         projectname: projectname,
+        mysql_user: 'vagrant',
+        mysql_pass: 'vagrant',
         document_root: "/var/www/current/htdocs"
       }
       ansible.limit = 'vagrant'

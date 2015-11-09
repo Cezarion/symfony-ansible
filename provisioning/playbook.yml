@@ -11,6 +11,7 @@
     - { role: kosssi.apache, tags: apache }
     - { role: ANXS.mysql, tags: mysql  } # Database
     - php
+    - phpmyadmin
     - { role: kosssi.composer }
     - Stouts.iptables
     - nickjj.fail2ban
