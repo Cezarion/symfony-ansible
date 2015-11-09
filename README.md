@@ -5,6 +5,32 @@ symfony-ansible
 
 https://github.com/MaximeThoonsen/symfony-ansible
 
+## Details : ##
+
+#### Changed from initial repo ####
+
+** Requirements : **
+
+[VirtualBox](https://www.virtualbox.org/)
+[Vagrant](https://www.vagrantup.com/)
+
+Vagrant plugin :
+[Vagrant host updater](https://github.com/cogitatio/vagrant-hostsupdater)
+[Vagrant cachier](https://github.com/fgrehm/vagrant-cachier)
+
+** Vagrant file : **
+Linux : debian/jessie64 instead of ubuntu/trusty64
+Variables : add *ansible.extra_vars* to set *document root* and share *project name*
+
+** Playbooks : **
+Replace : nginx by apache2
+Add : `provisonning/roles/common/tasks/npm_packages.yml` to install grunt and bower
+Update : `provisonning/main.yml` to set apache vhost
+
+
+
+## initial Readme : ##
+
 This repo will provide you an easy set-up for your symfony project.
 It provide the Vagrantfile to create your Ubuntu Trusty 64bits VM and it uses Ansible to provision it.
 You can also use Ansible to provision your remote server.
@@ -21,18 +47,18 @@ If so you should have a look at the list of [our best roles](https://github.com/
 ansible-galaxy install -r requirements.txt --force
 ```
 
-You can choose where you want your vendors to be stored in th ansible.cfg file   
+You can choose where you want your vendors to be stored in th ansible.cfg file
 
 ### Step 2) Configure your basic Vagrant's informations ###
 
-Change your project's name in the Vagrant file and choose the directory you want to sync (where your symfony project is) at the line:   
+Change your project's name in the Vagrant file and choose the directory you want to sync (where your symfony project is) at the line:
 ```
 #!shell
 config.vm.synced_folder "./", "/var/www/" + projectname + "/current", type: "nfs"
 ```
 
 
-You may want to change the ip of the vm at the line   
+You may want to change the ip of the vm at the line
 ```
 #!shell
 config.vm.network :private_network, ip: "10.0.0.7"
@@ -41,7 +67,7 @@ config.vm.network :private_network, ip: "10.0.0.7"
 Have a look at the [vagrant's documentation](https://docs.vagrantup.com/v2/provisioning/ansible.html) for more information.
 ### Step 3)Customize your provisioning ###
 
-Configure your vm in the provisioning/vars/main.yml. Mainly it will be usefull for changing the database information    
+Configure your vm in the provisioning/vars/main.yml. Mainly it will be usefull for changing the database information
 
 ### Step 4) ###
 ```
@@ -52,7 +78,7 @@ vagrant up --provision
 This will create the VM and lunch the provisioning
 
 You can modify the app_dev.php to be able to access it.
-You are done. 
+You are done.
 
 ### How to provision your remote server ###
 First update the host file in hosts/staging.
