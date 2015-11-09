@@ -1,0 +1,9 @@
+---
+# npm front dev tools required
+
+  - name: Node.js | Install packages
+    npm: name={{item}} global=yes
+    sudo: yes
+    with_items:
+      - grunt-cli
+      - bower

@@ -7,7 +7,7 @@ web:
   port: 80
 
 mysql_databases:
-  - name: "{{ name }}"
+  - name: "{{ projectname }}"
 
 iptables_allowed_tcp_ports: [22, 80, 443]
 
@@ -22,3 +22,22 @@ automysqlbackup_cron:
   weekday: "*"
 
 automysqlbackup_latest: "yes"
+
+apache_site_enable:
+      - "{{ projectname }}.vb"
+
+apache_vhosts:
+  - server_name: "{{ projectname }}.vb"
+    server_admin: tech@buzzaka.com
+    server_file_name: "{{ projectname }}"
+    document_root: "{{ document_root }}"
+    directory_extra:
+      - RewriteEngine On
+      - SetEnv APP_ENV dev
+    virtual_hosts:
+      - has_ssl: false
+        port: 80
+        server_alias:
+          - "{{ projectname }}.local"
+          - "{{ projectname }}.localnet"
+          - "www.{{ projectname }}.vb"

@@ -6,3 +6,4 @@
 - include: network_tweaks.yml
 - include: users.yml
 - include: sudo.yml
+- include: npm_packages.yml
