@@ -31,3 +31,6 @@
     - tree
     - tzdata
     - vim
+
+- name: Create symlinks from nodejs to node
+  file: src=/usr/bin/nodejs dest=/usr/bin/node state=link

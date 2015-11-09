@@ -3,6 +3,21 @@ timezone: Europe/Paris
 
 name: projectname
 
+vars:
+  users:
+    - name: Vagrant
+      username: vagrant
+      oh_my_zsh:
+        theme: pygmalion
+        plugins: git
+        case_sensitive: false
+        disable_auto_update: true
+        update_days: 13
+        disable_ls_colors: false
+        disable_auto_title: false
+        disable_correction: true
+        completion_waiting_dots: false
+
 web:
   port: 80
 

@@ -5,7 +5,6 @@
 projectname = 'beehive'
 
 Vagrant.configure("2") do |config|
-  config.vm.hostname = projectname
   config.vm.box = "debian/jessie64"
 # TODO: Change the directory
   config.vm.network :private_network, ip: "10.0.0.7"
@@ -24,9 +23,9 @@ Vagrant.configure("2") do |config|
     }
 
     config.cache.enable :generic, {
-      "cache"  => { cache_dir: "/var/www/" + projectname + "/current/app/cache" },
-      "logs"   => { cache_dir: "/var/www/" + projectname + "/current/app/logs" },
-      "vendor" => { cache_dir: "/var/www/" + projectname + "/current/vendor" },
+      "cache"  => { cache_dir: "/var/www/" + projectname + "/current/htdocs/app/cache" },
+      "logs"   => { cache_dir: "/var/www/" + projectname + "/current/htdocs/app/logs" },
+      "vendor" => { cache_dir: "/var/www/" + projectname + "/current/htdocs/vendor" },
     }
   end
 
