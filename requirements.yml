@@ -1,0 +1,23 @@
+---
+- src: kosssi.apache
+  version: v1.1.1
+
+- src: ANXS.mysql
+  version: v1.0.3
+
+- src: nickjj.fail2ban
+  version: v0.1.2
+
+- src: Stouts.iptables
+  version: 1.0.0
+
+- src: MaximeThoonsen.automysqlbackup
+  version: v1.0
+
+- src: MaximeThoonsen.php5-xdebug
+  version: v1.0.5
+
+- src: kosssi.composer
+  version: v1.0.3
+
+- src: franklinkim.users-oh-my-zsh

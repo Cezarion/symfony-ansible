@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  roles:
+    - franklinkim.git
+    - franklinkim.users-oh-my-zsh
+  vars:
+    users:
+      - name: Foo Bar
+        username: foobar
+        oh_my_zsh:
+          theme: supertheme

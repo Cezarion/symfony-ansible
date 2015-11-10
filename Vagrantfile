@@ -26,9 +26,9 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.ssh.insert_key = false
   config.ssh.forward_agent = true
-config.ssh.username = 'vagrant'
-config.ssh.password = 'vagrant'
-config.ssh.insert_key = 'true'
+  config.ssh.username = 'vagrant'
+  config.ssh.password = 'vagrant'
+  config.ssh.insert_key = 'true'
 
   config.vm.provider :virtualbox do |v|
     v.name = projectname+".vb"
