@@ -31,6 +31,7 @@
     - tree
     - tzdata
     - vim
+    - libapache2-mod-php5
 
 - name: Create symlinks from nodejs to node
   file: src=/usr/bin/nodejs dest=/usr/bin/node state=link

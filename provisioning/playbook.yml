@@ -13,6 +13,7 @@
     - php
     - phpmyadmin
     - { role: kosssi.composer }
+    - symfony_installer
     - Stouts.iptables
     - nickjj.fail2ban
     - MaximeThoonsen.automysqlbackup

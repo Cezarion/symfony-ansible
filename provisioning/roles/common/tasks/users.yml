@@ -10,8 +10,8 @@
 - name: set correct permissions for ssh dir
   file: path=/var/www/.ssh owner=www-data group=www-data mode=0700 state=directory
 
-- name: set correct permissions for current dir
-  file: path=/var/www/current owner=www-data group=www-data mode=0700 state=directory
+# - name: set correct permissions for current dir
+#   file: path=/var/www/current owner=www-data group=www-data mode=0755 state=directory
 
 - name: set correct permissions for tmp dir
   file: path=/tmp mode=0777 state=directory
